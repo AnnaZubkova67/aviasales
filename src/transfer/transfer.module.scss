@@ -22,7 +22,7 @@
     background: #F1FCFF
 
   }
-  &__li input[type=radio] {
+  &__li input {
     display: none;
   }
   &__li label {
@@ -48,7 +48,7 @@
     background-size: 50% 50%;
   }
 
-  &__li input[type=radio]:checked + label::before {
+  &__li input[type=checkbox]:checked + label::before {
     border-color: #2196F3;
     background-image: url("./checked.svg");
   }
