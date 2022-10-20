@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const filtersSlice = createSlice({
   name: 'filters',
   initialState: {
-    cheap: false,
+    cheap: true,
     fast: false,
     options: false,
   },

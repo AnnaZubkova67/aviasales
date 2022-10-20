@@ -1,9 +1,8 @@
 import React from 'react';
 
 import styles from './ticket.module.scss';
-import ticketImage from './airlines.svg';
 
-function Ticket({ price, segments }) {
+function Ticket({ price, segments, carrier }) {
   const [there, back] = segments;
 
   const transfer = (amount) => {
@@ -48,7 +47,7 @@ function Ticket({ price, segments }) {
     <li className={styles.ticket}>
       <div className={styles.ticket__header}>
         <p className={styles.ticket__count}>{`${price} p`}</p>
-        <img src={ticketImage} className={styles.ticket__img} alt="logoTicket" />
+        <img src={`//pics.avs.io/99/36/${carrier}.png`} className={styles.ticket__img} alt="logoTicket" />
       </div>
       <div className={styles.ticket__characteristic}>
         <div className={styles.ticket__direction}>

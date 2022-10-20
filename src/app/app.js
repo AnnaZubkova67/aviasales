@@ -8,6 +8,7 @@ import NetworkState from '../network-state/network-state';
 
 import logo from './logo.svg';
 import styles from './app.module.scss';
+
 import 'antd/dist/antd.css';
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
         <img src={logo} alt="logo" className={styles.aviasales__logo} />
         <div className={styles.aviasales__content}>
           <Transfer />
-          <TicketList />
+          <TicketList network={network} />
         </div>
       </section>
     </Spin>

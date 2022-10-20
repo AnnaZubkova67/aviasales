@@ -8,7 +8,7 @@ import Filters from '../filters';
 
 import styles from './ticket-list.module.scss';
 
-function TicketList() {
+function TicketList({ network }) {
   const dispatch = useDispatch();
   const { tickets, id, stop, error } = useSelector((state) => state.ticket);
   const { stateCheck } = useSelector((state) => state.transfer);
@@ -106,6 +106,17 @@ function TicketList() {
     </div>
   );
 
+  const hardFilter = (
+    <div className={styles['ticket-list__error']}>
+      <Alert
+        message="Informational Notes"
+        description="Рейсов, подходящих под заданные фильтры, не найдено"
+        type="info"
+        showIcon
+      />
+    </div>
+  );
+
   const procentProgress = Math.trunc(100 / (10000 / tickets.length));
 
   return (
@@ -114,14 +125,15 @@ function TicketList() {
       <div className={stop || tickets.length === 0 ? styles['ticket-list__progress'] : null}>
         <Progress percent={procentProgress} showInfo={stop} />
       </div>
-      {error ? errorElement : null}
+      {stateCheck.every((elem) => elem === false) ? hardFilter : null}
+      {error && network ? errorElement : null}
       <ul>
         {tickets
           ? // eslint-disable-next-line consistent-return
             filter().map((elem, i) => {
               if (i <= amountTicket) {
-                const { price, segments } = elem;
-                return <Ticket price={price} key={Math.random()} segments={segments} />;
+                const { price, segments, carrier } = elem;
+                return <Ticket price={price} key={Math.random()} segments={segments} carrier={carrier} />;
               }
             })
           : null}
