@@ -16,15 +16,21 @@
     width: 192px;
     padding: 10px 20px;
 
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
   }
 
   &__li:hover {
     background: #F1FCFF
 
   }
+
   &__li input {
     display: none;
   }
+
   &__li label {
     display: inline-block;
     cursor: pointer;
@@ -33,6 +39,7 @@
     line-height: 18px;
     user-select: none;
   }
+
   &__li label:before {
     content: '';
     display: inline-block;
@@ -74,10 +81,6 @@
     font-size: 13px;
     line-height: 20px;
     color: #4A4A4A;
-  }
-
-  &__radio {
-
   }
 
 }

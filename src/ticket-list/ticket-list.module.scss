@@ -2,31 +2,41 @@
   padding-left: 18px;
   max-width: 100%;
   flex-grow: 2;
-  
+
   @media (max-width: 768px) {
     padding: 0;
   }
 
-  & .criterion-list {
-    @media (max-width: 768px) {
-      display: none;
-    }
+  &__button {
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    background: #2196F3;
+    text-transform: uppercase;
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FFFFFF;
   }
 
+  &__progress {
+    display: none !important;
+  }
+
+  &__error {
+    align-self: center;
+    width: 100%;
+    position: sticky !important;
+    margin-top: 10px;
+    z-index: 2;
+  }
 }
 
-.button {
-  height: 50px;
-  width: 100%;
-  border-radius: 5px;
-  background: #2196F3;
-  text-transform: uppercase;
-  border: 0;
-  font-family: 'Open Sans', sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 20px;
-  color: #FFFFFF;
 
-}
+
+
+
+

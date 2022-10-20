@@ -15,61 +15,65 @@ function Transfer() {
         <li className={styles.transfer__header}>Количество пересадок</li>
         <li className={styles.transfer__li}>
           <input
-            id="radio-1"
+            id="all"
             type="checkbox"
             className={styles.transfer__radio}
             checked={check[0]}
-            onChange={() => dispatch(chooseAll())}
+            onChange={() => {
+              dispatch(chooseAll());
+            }}
           />
-          <label htmlFor="radio-1" className={styles.transfer__label}>
+          <label htmlFor="all" className={styles.transfer__label}>
             Все
           </label>
         </li>
         <li className={styles.transfer__li}>
           <input
-            id="radio-2"
+            id="no-transfer"
             type="checkbox"
             className={styles.transfer__radio}
             checked={check[1]}
-            onChange={() => dispatch(chooseOne({ index: 1 }))}
+            onChange={() => {
+              dispatch(chooseOne({ index: 1 }));
+            }}
           />
-          <label htmlFor="radio-2" className={styles.transfer__label}>
+          <label htmlFor="no-transfer" className={styles.transfer__label}>
             Без пересадок
           </label>
         </li>
         <li className={styles.transfer__li}>
           <input
-            id="radio-3"
+            id="1-transfer"
             type="checkbox"
             className={styles.transfer__radio}
             checked={check[2]}
             onChange={() => dispatch(chooseOne({ index: 2 }))}
           />
-          <label htmlFor="radio-3" className={styles.transfer__label}>
+          <label htmlFor="1-transfer" className={styles.transfer__label}>
             1 пересадка
           </label>
         </li>
         <li className={styles.transfer__li}>
           <input
-            id="radio-4"
+            id="2-transfer"
             type="checkbox"
             className={styles.transfer__radio}
             checked={check[3]}
             onChange={() => dispatch(chooseOne({ index: 3 }))}
           />
-          <label htmlFor="radio-4" className={styles.transfer__label}>
+          <label htmlFor="2-transfer" className={styles.transfer__label}>
             2 пересадки
           </label>
         </li>
         <li className={styles.transfer__li}>
           <input
-            id="radio-5"
+            id="3-transfer"
             type="checkbox"
             className={styles.transfer__radio}
             checked={check[4]}
             onChange={() => dispatch(chooseOne({ index: 4 }))}
           />
-          <label htmlFor="radio-5" className={styles.transfer__label}>
+          <label htmlFor="3-transfer" className={styles.transfer__label}>
             3 пересадки
           </label>
         </li>

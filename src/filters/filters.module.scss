@@ -3,8 +3,7 @@
   list-style-type: none;
   margin-block-end: 0;
 
-
-  & input[type=radio] {
+  & input[type=checkbox] {
     display: none;
   }
 
@@ -12,11 +11,12 @@
     width: 37%;
   }
 
-  & label {
+  & button {
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
+    width: 100%;
     height: 50px;
     padding: 2px;
     background: #FFFFFF;
@@ -36,22 +36,17 @@
     }
   }
 
-  &__criterion:first-child label{
+  &__criterion:first-child button {
     border-radius: 6px 0 0 6px;
   }
-  &__criterion:last-child label{
+
+  &__criterion:last-child button {
     border-radius: 0 6px 6px 0;
   }
 
-  & label:hover{
-    background: #2196F3;
-    color: #FFFFFF;
+  &__button--active {
+    background: #2196F3 !important;
+    color: #FFFFFF !important;
   }
-  & input[type=radio]:checked + label {
-    background: #2196F3;
-    color: #FFFFFF;
-  }
-
-
 
 }

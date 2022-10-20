@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const transferSlice = createSlice({
   name: 'chekedTransfer',
   initialState: {
-    stateCheck: [false, false, false, false, false],
+    stateCheck: [true, true, true, true, true],
   },
   reducers: {
     chooseAll: (state) => {
