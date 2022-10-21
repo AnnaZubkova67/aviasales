@@ -18,10 +18,10 @@ function TicketList({ network }) {
   }, []);
 
   useEffect(() => {
-    if (id && !stop) {
+    if (id && !stop && network) {
       dispatch(fetchTicket(id));
     }
-  }, [id, tickets, stop]);
+  }, [id, tickets, stop, network]);
 
   const [amountTicket, setAmountTicket] = useState(5);
   useEffect(() => {

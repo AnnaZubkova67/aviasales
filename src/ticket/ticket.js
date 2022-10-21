@@ -64,9 +64,9 @@ function Ticket({ price, segments, carrier }) {
         </div>
         <div className={styles.ticket__direction}>
           <p className={styles.ticket__description}>{transfer(there.stops.length)}</p>
-          <p className={styles.ticket__value}>{there.stops.length ? `${there.stops.join(', ')}` : ' '}</p>
+          <p className={styles.ticket__value}>{`${there.stops.join(', ')}`}</p>
           <p className={styles.ticket__description}>{transfer(back.stops.length)}</p>
-          <p className={styles.ticket__value}>{back.stops.length ? `${there.stops.join(', ')}` : ' '}</p>
+          <p className={styles.ticket__value}>{`${there.stops.join(', ')}`}</p>
         </div>
       </div>
     </li>
